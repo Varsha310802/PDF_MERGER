@@ -1,45 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Blog</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sarah's Multimedia Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#clothing">Clothing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="about-section">
-      <button>About Us</button>
-      <div class="images">
-        <div class="image-card">
-          <img src="https://tse4.mm.bing.net/th?id=OIP.RQ_GkM6gQczk_urKbqsxSwHaLz&pid=Api&P=0&h=180" alt="Pic 1">
-          <p>Beautiful Clothing</p>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Blog Logo">
         </div>
-        <div class="image-card">
-          <img src="https://tse3.mm.bing.net/th?id=OIP.EHp6SA9ELR9SeWHh3M_01QHaIv&pid=Api&P=0&h=180" alt="Pic 2">
-          <p>Exclusive Collection</p>
-        </div>
-        <div class="image-card">
-          <img src="https://tse4.mm.bing.net/th?id=OIP.qjW2Nq_N-uEsqNkzECewFQHaJQ&pid=Api&P=0&h=180" alt="Pic 3">
-          <p>Latest Trends</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <h1>Sarah's Multimedia Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <footer>
-    <p>Blog footer</p>
-  </footer>
+    <!-- Main Content Section -->
+    <main>
+        <section id="blog">
+            <article>
+                <h2>Introduction to My Blog</h2>
+                <p>Welcome to my multimedia blog where I share everything from videos, audio, images, and much more!</p>
+                
+                <!-- Audio and Video -->
+                <audio controls>
+                    <source src="background-music.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <video width="600" controls>
+                    <source src="intro-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+
+            <!-- Embedded YouTube Video -->
+            <article>
+                <h2>My Favorite Video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sample-video" allowfullscreen></iframe>
+            </article>
+
+            <!-- Data Table -->
+            <article>
+                <h2>Comparison Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Blog A</th>
+                            <th>Blog B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ease of Use</td>
+                            <td>8/10</td>
+                            <td>9/10</td>
+                        </tr>
+                        <tr>
+                            <td>Customization</td>
+                            <td>7/10</td>
+                            <td>8/10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <!-- Image Section -->
+            <article>
+                <h2>Image Gallery</h2>
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+            </article>
+
+            <!-- Form Section -->
+            <article>
+                <h2>Leave Your Comments</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="5" required></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sarah's Blog. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+    </footer>
+
 </body>
 </html>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+main article {
+    margin-bottom: 40px;
+}
+
+main h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Image Styling */
+img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    img {
+        width: 100%;
+    }
+}
